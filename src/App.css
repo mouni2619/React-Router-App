@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+.maincard {
+  width: 270px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width:576px) {
+  .maincard {
+    width: 240px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cardbody {
+  margin: 10px 10px 0px 10px;
+  text-align: start;
 }
 
-.App-link {
-  color: #61dafb;
+.cardpara {
+  font-size: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cardtitle {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.readmore {
+  font-size: 10px;
+  color: rgb(8, 159, 8);
+  font-weight: 700;
+}
+
+.bottomdate {
+  font-size: 12px;
+}
+
+/* Grid layout for all cards */
+.allcardsmap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 100px;
+  margin-right: 100px;
+  gap: 1rem;
+}
+
+@media screen and (max-width:996px) {
+  .allcardsmap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 50px;
+    margin-right: 50px;
+    gap: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width:576px) {
+  .allcardsmap {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 30px;
+    margin-right: 10px;
+    gap: 1rem;
   }
+}
+
+.navbar-nav .nav-item .nav-link {
+  position: relative;
+}
+
+/* Style for the line below the navbar links */
+.navbar-nav .nav-item .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+/* Style for the line below the navbar links on hover */
+.navbar-nav .nav-item:hover .nav-link::after {
+  background-color: rgb(20, 165, 20);
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+  color: rgb(20, 165, 20);
+}
+
+.allcardmapmargin {
+  margin-top: 25px;
+}
+
+.navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar-nav .nav-item .nav-link {
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  color: rgb(20, 165, 20);
+}
+
+/* Style for line below active navbar link */
+.navbar-nav .nav-item.active .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(20, 165, 20);
+}
+
+@media screen and (max-width:768px) {
+  .navbar-nav .nav-item {
+    position: relative;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    transition: color 0.3s;
+  }
+
+  .navbar-nav .nav-item.active .nav-link {
+    color: rgb(20, 165, 20);
+  }
+
+  .navbar-nav .nav-item.active .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(20, 165, 20);
+  }
+}
+
+.navbarheader {
+  position: fixed;
+  top: 0;
+  font-size: 13px;
+  font-weight: 600;
 }

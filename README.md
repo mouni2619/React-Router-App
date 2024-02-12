@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+I've developed a React Router application featuring a navbar with options such as "All,", "Cybersecurity", "Full Stack Development", "Career",  and "Data Science". Each option leads to a specific page/component displaying relevant information through cards. The card data, stored in an array of objects, is mapped to create meaningful sentences, enhancing the user experience by providing organized and informative content. Users can seamlessly navigate between sections to explore different topics which was provided. Here for styling i used css,bootstrap and MUI.
+
+# Live Link
+https://65c95f748e861274066cdeb8--magenta-figolla-a767d3.netlify.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
